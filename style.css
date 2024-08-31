@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --color1: #222831;
+    --color2: #393E46;
+    --color3: #00ADB5;
+    --color4: #EEEEEE;
+    font-family: "Montserrat",sans-serif;
+}
+body{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/620/81/253/pattern-design-dark-texture-wallpaper-preview.jpg);
+    background-color: var(--color1);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    padding: 0 10%;
+    min-height: 100vh;
+}
+.nav{
+    color: var(--color3);
+    font-size: 4vw;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+}
+.data , .preview , .formatted{
+    background-color: #393e46a9 ;
+    border-radius:10px;
+    margin-bottom: 10px;
+}
+.data .name , .preview .name, .formatted .name{
+    font-size: 3vw;
+    color: var(--color3);
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0;
+}
+input{
+    margin: 10px;
+    background-color: var(--color1);
+    border-style: none;
+    padding: 10px;
+    border: 2px solid var(--color2);
+    color: var(--color4);
+}
+input:focus{
+    color: var(--color3);
+}
+.heading{
+    text-align: center;
+}
+.bold{
+    font-weight: 600;
+}
+.italic{
+    font-style: italic;
+}
+.data .extra{
+    text-align: center;
+}
+#details-preview,#formatted-text{
+    margin: 5%;
+    background-color: var(--color1);
+}
