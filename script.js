@@ -42,7 +42,7 @@ function dpreview() {
         <li> ${document.getElementById(`student${i}name`).value} ${document.getElementById(`student${i}marks`).value}
         ${checkresult(i,passing)}
         `
-
+        ftext()
     }
 }
             
@@ -53,4 +53,20 @@ function checkresult(i,passing){
     else if (eval(document.getElementById(`student${i}marks`).value)>=passing)
     {return "<i><b>PASS</b></i>"}
     else{return ""}
+    
+}
+
+
+// formatted text
+function ftext(){
+    text=document.getElementById("details-preview").innerHTML
+    text=text.replaceAll("<b>","*")
+    text=text.replaceAll("</b>","* ")
+    text=text.replaceAll("<i>","_")
+    text=text.replaceAll("</i>","_ ")
+    text=text.replaceAll("<ul>","")
+    text=text.replaceAll("</ul>","")
+    text=text.replaceAll("<li>","*")
+    text=text.replaceAll("</li>","")
+    document.getElementById("formatted-text").innerHTML = text
 }
