@@ -39,7 +39,7 @@ function dpreview() {
     for(let i=1; i<total;i++){
         document.getElementById("details-preview").innerHTML += 
         `
-        <li> ${document.getElementById(`student${i}name`).value} ${document.getElementById(`student${i}marks`).value}
+        <li> ${document.getElementById(`student${i}name`).value} - ${document.getElementById(`student${i}marks`).value}
         ${checkresult(i,passing)}
         `
         ftext()
@@ -68,5 +68,14 @@ function ftext(){
     text=text.replaceAll("</ul>","")
     text=text.replaceAll("<li>","*")
     text=text.replaceAll("</li>","")
-    document.getElementById("formatted-text").innerHTML = text
+    text=text.replaceAll(" ","")
+    document.getElementById("ftfield").value = text
+}
+
+function copytext(){
+    var copy = document.getElementById("ftfield");
+    copy.select();
+    copy.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(copy.value);
+    alert("Text Copied!")
 }

@@ -28,6 +28,7 @@ body{
     background-color: #393e46a9 ;
     border-radius:10px;
     margin-bottom: 10px;
+    position: relative;
 }
 .data .name , .preview .name, .formatted .name{
     font-size: 3vw;
@@ -69,4 +70,28 @@ input:focus{
 #details-preview,#formatted-text{
     color: var(--color4);
     padding: 10px;
+}
+#copy{
+    background-color: var(--color3);
+    color: var(--color1);
+    border-radius: 10px;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 600 ;
+}
+#copy:hover{
+    background-color: var(--color4);
+    color: var(--color3);
+}
+#ftfield{
+    resize: none;
+    background-color: var(--color1);
+    border: 3px solid var(--color2);
+    color: var(--color4);
+    width: 100%;
+    height: 200px;
 }
